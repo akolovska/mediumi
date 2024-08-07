@@ -1,0 +1,25 @@
+body > h1{
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tekst{
+    font-size: 28px;
+    width: 50%;
+    height: 50%;
+    margin-left: 100px;
+    margin-top: 80px;
+
+}
+.slika{
+    float: right;
+
+}
+body > div.slika > img{
+
+    margin-top: -282px;
+    margin-right: 180px;
+
+}
