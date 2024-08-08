@@ -32,18 +32,19 @@ body > h1 {
 .centered {
     display: grid;
     grid-template-columns: 1450px 700px;
-    grid-template-rows: 600px;
+    grid-template-rows: 580px;
     margin-bottom: -95px;
 }
 
-body > div > div.slika > img {
-    margin-top: 105px;
-    margin-left: -300px;
+body > div > img {
+    margin-left: -270px;
+    margin-top: 100px;
 }
 
 .footer {
     background: #FDDA49;
     padding: 50px 0;
+    margin-top: 16px;
 }
 
 .container {
@@ -66,6 +67,7 @@ ul {
     width: 25%;
     padding: 0 15px;
 }
+
 
 .footer-col h4 {
     font-size: 18px;
@@ -140,3 +142,22 @@ ul {
         width: 100%;
     }
 }
+
+div.kopce a {
+    margin-left: 100px;
+    background-color: #FDDA49;
+    color: #3775A9;
+    border-radius: 8px;
+    padding: 4px 4px;
+    margin-right: 1400px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+body > div.kopce > a {
+    padding-left: 10px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
