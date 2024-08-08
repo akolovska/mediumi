@@ -31,13 +31,14 @@ body > h1 {
 
 .centered {
     display: grid;
-    grid-template-columns: 1100px 700px;
+    grid-template-columns: 1450px 700px;
     grid-template-rows: 600px;
     margin-bottom: -95px;
 }
 
 body > div > div.slika > img {
     margin-top: 105px;
+    margin-left: -300px;
 }
 
 .footer {
