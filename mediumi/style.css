@@ -45,6 +45,7 @@ body > div > img {
     background: #FDDA49;
     padding: 50px 0;
     margin-top: 16px;
+    height: 239px;
 }
 
 .container {
@@ -143,6 +144,11 @@ ul {
     }
 }
 
+.kopce {
+    height: 50px;
+    margin-top: -20px;
+}
+
 div.kopce a {
     margin-left: 100px;
     background-color: #FDDA49;
@@ -161,3 +167,4 @@ body > div.kopce > a {
 }
 
 /*---------------------------------------------*/
+
