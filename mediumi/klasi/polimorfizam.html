@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <h3>Полиморфизам</h3>
+    Полиморфизмот често се користи во методите на класи, каде што можеме да имаме повеќе класи со исто име на методот.
+    На пример, да речеме дека имаме три класи: Car, Boat и Plane, и сите тие имаат метод наречен move():
+    Различни класи со ист метод:
+<div>class Car:<br>
+    def __init__(self, brand, model):<br>
+    self.brand = brand<br>
+    self.model = model<br>
+
+    def move(self):<br>
+    print("Drive!")<br>
+
+    class Boat:<br>
+    def __init__(self, brand, model):<br>
+    self.brand = brand<br>
+    self.model = model<br>
+
+    def move(self):<br>
+    print("Sail!")<br>
+
+    class Plane:<br>
+    def __init__(self, brand, model):<br>
+    self.brand = brand<br>
+    self.model = model<br>
+
+    def move(self):<br>
+    print("Fly!")<br>
+
+    car1 = Car("Ford", "Mustang")       #Креирајте класа Car<br>
+    boat1 = Boat("Ibiza", "Touring 20") #Креирајте класа Boat<br>
+    plane1 = Plane("Boeing", "747")     #Креирајте класа Plane<br>
+
+    for x in (car1, boat1, plane1):<br>
+    x.move()</div>
+    Погледнете ја јамката за на крајот. Поради полиморфизмот можеме да го извршиме истиот метод за сите три класи.
+<br>
+<h3>Полиморфизам на класа на наследување</h3>
+    Што е со часовите со детски паралелки со исто име? Можеме ли да користиме полиморфизам таму?
+<br>
+    Да. Ако го искористиме примерот погоре и направиме родителска класа наречена Vehicle и направиме Car, Boat, Plane детски класи на Vehicle, детските класи ги наследуваат методите Vehicle, но можат да ги отфрлат:
+<br>
+    Создадете класа наречена Vehicle и направете дете класи на возила за Car, Boat, Airplane:
+<div>class Vehicle:<br>
+    def __init__(self, brand, model):<br>
+    self.brand = brand<br>
+    self.model = model<br>
+
+    def move(self):<br>
+    print("Move!")<br>
+
+    class Car(Vehicle):<br>
+    pass<br>
+
+    class Boat(Vehicle):<br>
+    def move(self):<br>
+    print("Sail!")<br>
+
+    class Plane(Vehicle):<br>
+    def move(self):<br>
+    print("Fly!")<br>
+
+    car1 = Car("Ford", "Mustang") #Create a Car object<br>
+    boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object<br>
+    plane1 = Plane("Boeing", "747") #Create a Plane object<br>
+
+    for x in (car1, boat1, plane1):<br>
+    print(x.brand)<br>
+    print(x.model)<br>
+    x.move()</div>
+
+    Детските класи ги наследуваат својствата и методите од матичната класа.<br>
+
+    Во примерот погоре можете да видите дека класата Car е празна, но го наследува brand, model и move() од Vehicle.
+<br>
+    Класите Boat и Plane исто така наследуваат brand, model и move() од Vehicle, но и двете го отфрлаат методот move().
+<br>
+    Поради полиморфизмот можеме да го извршиме истиот метод за сите класи.<br>
+</p>
+
+</body>
+</html>

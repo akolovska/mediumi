@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p><h3>Објекти на Python</h3><br>
+Објектот се нарекува инстанца на класа.<br>
+
+Да претпоставиме дека Bike е класа, тогаш можеме да креираме објекти како bike1, bike2, итн од класата.
+<br>
+Еве ја синтаксата за креирање објект.
+<br>
+<div>objectName = ClassName()</div><br>
+Ајде да видиме пример,<br>
+<div>
+  # создај класа<br>
+  class Bike:<br>
+  name = ""<br>
+  gear = 0<br>
+
+  # креирај објект од класата<br>
+  bike1 = Bike()<br>
+</div>
+
+
+Овде, bike1 е објектот на класата. Сега, можеме да го користиме овој објект за пристап до атрибутите на класата.
+<br>
+<h3>Пристап до атрибутите на класата користејќи објекти</h3><br>
+Ние ја користиме . нотација за пристап до атрибутите на класата. На пример,<br>
+<div>
+  # изменете го името<br>
+  bike1.name = "Mountain bike"<br>
+
+  # пристап до опремата<br>
+  bike1.gear<br>
+  Овде, ги користевме bike1.name и bike1.gear за промена и пристап до вредноста на атрибутите на име и опрема, соодветно.
+  <br>
+</div>
+<div># define a class<br>
+  class Bike:<br>
+  name = ""<br>
+  gear = 0<br>
+
+  # create object of class<br>
+  bike1 = Bike()<br>
+
+  # access attributes and assign new values<br>
+  bike1.gear = 11<br>
+  bike1.name = "Mountain Bike"<br>
+
+  print(f"Name: {bike1.name}, Gears: {bike1.gear} ")</div><br>
+Во горниот пример, ја дефиниравме класата со име Bike со два атрибути: име и опрема.<br>
+
+Создадовме и објект bike1 од класата Bike.<br>
+
+Конечно, пристапивме и ги изменивме својствата на објектот користејќи го . нотација.<br>
+<h3>Креирање повеќе инстанци од класа</h3><br>
+<div>
+  # класа<br>
+  class Employee:<br>
+  employee_id = 0<br>
+
+  # две инстанци од класа<br>
+  employee1 = Employee()<br>
+  employee2 = Employee()<br>
+
+  # пристап до атрибутот од првата инстанца<br>
+  employee1.employeeID = 1001<br>
+  print(f"Employee ID: {employee1.employeeID}")<br>
+
+  # пристап до атрибутот од втората инстанца<br>
+  employee2.employeeID = 1002<br>
+  print(f"Employee ID: {employee2.employeeID}")<br>
+
+  Output:<br>
+  Employee ID: 1001<br>
+  Employee ID: 1002<br>
+</div>
+Можеме да дефинираме и функција во класата на Python. Функцијата Python дефинирана во класата се нарекува метод.
+<br>
+<div>
+  # create a class<br>
+  class Room:<br>
+  length = 0.0<br>
+  breadth = 0.0<br>
+
+  # method to calculate area<br>
+  def calculate_area(self):<br>
+  print("Area of Room =", self.length * self.breadth)<br>
+
+  # create object of Room class<br>
+  study_room = Room()<br>
+
+  # assign values to all the properties<br>
+  study_room.length = 42.5<br>
+  study_room.breadth = 30.8<br>
+
+  # access method inside class<br>
+  study_room.calculate_area()<br>
+  Run Code<br>
+  Output<br>
+
+  Area of Room = 1309.0<br>
+</div>
+Во горниот пример, создадовме класа со име Room со:<br>
+
+Атрибути: должина и ширина<br>
+Метод: пресметај_површина()<br>
+Овде, создадовме објект со име study_room од класата Room.<br>
+
+Потоа го користевме објектот за доделување вредности на атрибути: должина и ширина.<br>
+
+Забележете дека исто така го користевме објектот за да го повикаме методот во класата,<br>
+
+<div>study_room.calculate_area()</div><br>
+Еве, ние го користевме . нотација за да го повикате методот. Конечно, изјавата во методот се извршува.
+</p>
+
+</body>
+</html>
