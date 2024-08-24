@@ -2,47 +2,193 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Користење на библиотеки во Python</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
+
 </head>
 <body>
-<p><h3>Употреба на библиотеки во програмата Python</h3>
-    Додека пишуваме програми со големи димензии во Python,
-    сакаме да ја одржиме модуларноста на кодот. За лесно одржување на кодот,
-    го делиме кодот на различни делови и можеме да го користиме тој код подоцна кога ќе ни треба.
-    Во Python, модулите ја играат таа улога. Наместо да го користиме истиот код во различни
-    програми и да го правиме кодот сложен, ние ги дефинираме најчесто користените функции во
-    модулите и можеме едноставно да ги увеземе во програма секаде каде што има потреба.
-    Не треба да го пишуваме тој код, но сепак, можеме да ја користиме неговата функционалност
-    со увоз на неговиот модул. Во библиотека се чуваат повеќе меѓусебно поврзани модули.
-    И секогаш кога треба да користиме модул, го увезуваме од неговата библиотека.
-    Во Пајтон, тоа е многу едноставна работа поради неговата лесна синтакса.
-    Треба само да користиме увоз.<br>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Користење на библиотеки во Python</h2>
+    <p>Наместо да го користиме истиот код во различни програми и да го правиме кодот сложен, ние можеме едноставно да
+        ги преземеме во програма секаде каде што има потреба.<br>
+    <p>Во <b>Python</b>, библиотеките ја играат таа улога.</p>
+    <p>Не треба да го пишуваме тој код, но сепак, можеме да ја користиме неговата функционалност. <br><br></p>
 
-    Ајде да погледнеме во примерен код:
-<div># Importing math library<br>
-    import math<br>
+    <h3>Во Python, тоа е многу едноставна работа поради неговата лесна синтакса.</h3>
 
-    A = 16<br>
-    print(math.sqrt(A))</div>
+    <p>Во продолжение ќе разгледаме едноставен пример</p>
+    <div class="image-container3">
+        <img src="image/pr1.png" alt="slika">
+    </div>
+    <br>
+    <p>Излез: 4.0</p>
+    <p>Овде, во горниот код, ја преземавме математичката библиотека и користевме еден од нејзините методи, т.е. <b>sqrt
+        (квадратен корен)</b> без да го напишеме вистинскиот код за да го пресметаме квадратниот корен на број.
+        На овој начин библиотеките ви ја олеснуваат работата.
+        Но, овде конкретно ни требаше само методот sqrt, но ние ја превземавме целата библиотека.<br>
+        Наместо ова, ние можеме да ги превземеме ставките библиотечниот модул кои ќе ни бидат потребни.</p>
+    <h3>Во продолжение имате друг пример</h3>
+    <div class="image-container3">
+        <img src="image/pr2.png" alt="slika">
+    </div>
+    <br>
+    <p>Излез: <br> 4.0 <br>0.0015926529164868282</p>
+    <h3>Во претходниот код, ги превземавме само методите кои ни беа потребни за дадените пресметкки, тоа беа „sqrt“ и
+        „sin“</h3>
 
-    Излез<br>
-    4.0<br>
-    Овде, во горниот код, ја увезовме математичката библиотека и користевме еден од нејзините методи, т.е. sqrt (квадратен корен) без да го напишеме вистинскиот код за да го пресметаме квадратниот корен на број. Така библиотеката им ја олеснува работата на програмерите. Но, овде ни требаше само методот sqrt на математичка библиотека, но ја увезовме целата библиотека. Наместо ова, ние исто така можеме да увеземе одредени ставки од библиотечниот модул.
-<br>
-    Како и во горниот код, увезовме целосна библиотека за да користиме еден од нејзините методи. Но, можевме само да увеземе „sqrt“ од математичката библиотека. Пајтон ни овозможува да внесуваме одредени ставки од библиотека.
-<br>
-    Ајде да погледнеме во примерен код:
-    <div># Importing specific items<br>
-    from math import sqrt, sin<br>
+    <div class="button-container">
+        <a href="../test.html" target="_blank" class="styled-button">Продолжи кон тестот</a>
+    </div>
+</div>
 
-    A = 16<br>
-    B = 3.14<br>
-    print(sqrt(A))<br>
-    print(sin(B))</div>
-Output<br>
-4.0<br>
-0.0015926529164868282<br>
-Во горниот код, можеме да видиме дека ги увезовме само методите „sqrt“ и „sin“ од математичката библиотека.
-</p>
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../intro.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Нешто друго да се додаде??</h4>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
