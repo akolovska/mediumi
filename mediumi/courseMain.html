@@ -2,16 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Course</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible List Group with Side-by-Side Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            max-width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .list-group {
+            width: 300px; /* Fixed width for the list group */
+            margin: 20px;
+            border-right: 2px solid #ccc;
+            overflow-y: auto; /* Add scroll if the list gets too long */
+        }
+
+        .collapsible {
+            background-color: #3775A9;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+        }
+
+        .collapsible:after {
+            content: '\002B'; /* Unicode character for "plus" sign (+) */
+            color: white;
+            font-weight: bold;
+            float: right;
+        }
+
+        .collapsible.active:after {
+            content: "\2212"; /* Unicode character for "minus" sign (−) */
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .list-item {
+            background-color: #e7e7e7;
+            color: black;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 5px;
+            text-decoration: none; /* Remove underline for links */
+            display: block;
+        }
+
+        .display-area {
+            flex-grow: 1;
+            width: 100%; /* Take up remaining space */
+            padding: 20px;
+            margin: 20px;
+            border-left: 2px solid #ccc;
+            background-color: #f9f9f9;
+            overflow-y: auto; /* Add scroll if the content gets too long */
+            max-height: calc(100vh - 40px); /* Ensure display-area does not exceed viewport height */
+            box-sizing: border-box; /* Include padding in height calculation */
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="list-group">
+        <button class="collapsible">Што е Python, a што Pycharm?</button>
+        <div class="content">
+            <a href="python,pycharm/stoePython.html" class="list-item">Што е Python?</a>
+            <a href="python,pycharm/instalacijaNaPycharm.html" class="list-item">Инсталација на Pycharm</a>
+        </div>
+
+        <button class="collapsible">Синтакса на Python, варијабли, дата типови и оператори
+        </button>
+        <div class="content">
+            <a href="sintaksa_varijabli_dataTipovi_operatori/sintaksaNaPython.html" class="list-item">Синтакса на
+                Python</a>
+            <a href="sintaksa_varijabli_dataTipovi_operatori/variables,dataTypes.html" class="list-item">Варијабли и
+                Дата Типови (Variables & Data Types</a>
+            <a href="sintaksa_varijabli_dataTipovi_operatori/aritmetickiLogickiOperatori.html" class="list-item">Аритметички
+                и логички оператори</a>
+        </div>
+
+        <button class="collapsible">Conditional statement if else, while, for</button>
+        <div class="content">
+            <a href="conditional_statements_ifelse_while_for/if_else.html" class="list-item">If else</a>
+            <a href="conditional_statements_ifelse_while_for/while.html" class="list-item">while</a>
+            <a href="conditional_statements_ifelse_while_for/for.html" class="list-item">for</a>
+        </div>
+
+        <button class="collapsible">Функции</button>
+        <div class="content">
+            <a href="funkcii/deklaracii_na_funkcii_sintaksa.html" class="list-item">Декларации на функции и синтакса</a>
+            <a href="funkcii/rekurzivniFunkcii.html" class="list-item">Рекурзивни функции</a>
+
+        </div>
+
+
+        <button class="collapsible">Листи, Речници, Множества, Торки</button>
+        <div class="content">
+            <a href="listi,recnici,mnozestvo,torki/listi.html" class="list-item">Листа</a>
+            <a href="listi,recnici,mnozestvo,torki/recnici.html" class="list-item">Речници</a>
+            <a href="listi,recnici,mnozestvo,torki/mnozestva.html" class="list-item">Множества</a>
+            <a href="listi,recnici,mnozestvo,torki/torki.html" class="list-item">Торки</a>
+        </div>
+
+        <button class="collapsible">Низи и матрици</button>
+        <div class="content">
+            <a href="nizimatrici/matrici.html" class="list-item">Матрици</a>
+            <a href="nizimatrici/nizi.html" class="list-item">Низи</a>
+
+        </div>
+
+        <button class="collapsible">Класи</button>
+        <div class="content">
+            <a href="klasi/klasa.html" class="list-item">Што е класа?</a>
+            <a href="klasi/objekti.html" class="list-item">Објекти</a>
+            <a href="klasi/nasleduvanje.html" class="list-item">Наследување</a>
+            <a href="klasi/polimorfizam.html" class="list-item">Полиморфизам</a>
+            <a href="klasi/init%20constructor.html" class="list-item">Init Constructor</a>
+        </div>
+
+        <button class="collapsible">Датотеки</button>
+        <div class="content">
+            <a href="datoteki/datoteki.html" class="list-item">Што е датотека?</a>
+            <a href="datoteki/datoteki2.html" class="list-item">Отварање на датотека</a>
+            <a href="datoteki/datoteki3.html" class="list-item">Пишување и затворање на датотека</a>
+            <a href="datoteki/datoteki4.html" class="list-item">Бришење на датотека</a>
+        </div>
+
+        <button class="collapsible">Библиотеки</button>
+        <div class="content">
+            <a href="libraries/biblioteki.html" class="list-item">Што е библиотека?</a>
+            <a href="libraries/biblioteki2.html" class="list-item">Користење на библиотеки</a>
+        </div>
+
+        <button class="collapsible">Тест</button>
+        <div class="content">
+            <a href="libraries/biblioteki2.html" class="list-item">Тест</a>
+        </div>
+
+
+        <!-- Add more sections and links as needed -->
+
+    </div>
+
+    <div id="display-area" class="display-area">
+        <p style="font-size: 16px">Добредојдовте на курсот, кадешто ќе се запознаете со програмскиот јазик Python.</p>
+        (Со клик на било кој од насловите, ќе ви излезат поднаслови за кликнатата содржина).
+    </div>
+</div>
 
 
 <footer class="footer">
-    <div class="container">
+    <div class="containerr">
         <div class="row">
             <div class="footer-col">
                 <h4>Ориентација</h4>
@@ -53,5 +218,26 @@
     </div>
 
 </footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var collapsibleButtons = document.querySelectorAll(".collapsible");
+
+        collapsibleButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
