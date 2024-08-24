@@ -6,12 +6,163 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
 
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
 </head>
 <body>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Инсталација на Pycharm</h2>
+    <p>PyCharm е интегрирана развојна средина (IDE) развиена од JetBrains, наменета за Python програмирање. Повеќе од
+        само текстуален уредувач, PyCharm обезбедува разни алатки кои помагаат во пишувањето, тестирањето и дебагирањето
+        на Python кодот.</p>
+    <h4>Клучни карактеристики на PyCharm:</h4>
+    <p>
+        • <b>Код Completion:</b> Автоматско комплетирање на кодот додека го пишувате.<br>
+        • <b>Дебагирање:</b> Можете лесно да дебагирате вашите апликации со помош на вградените алатки за
+        дебагирање.<br>
+        • <b>Интеграција со верзиски контроли:</b> Поддршка за Git, SVN, Mercurial и други верзиски контроли.<br>
+        • <b>Интеграција со тестирање:</b> Лесно создавање и управување со тестови.<br>
+        • <b>Управување со зависности:</b> Лесно управување со библиотеките и пакетите што ги користите во вашиот
+        проект.<br>
+        PyCharm е многу популарен избор меѓу Python програмерите бидејќи обезбедува сеопфатен сет на алатки за развој и
+        тестирање на Python апликации.<br></p>
+    <br><br>
+    <h4>Во наредните чекори има како да го исталирате Pycharm</h4>
+    <p>Откако ќе се инсталира , треба да кликнете на самата програма и ќе ви се отвори ваков прозорец. Треба да
+        притиснете Next.</p>
 
+    <div class="image-container">
+        <img src="image/welcome_Pycharm.png" alt="slika">
+    </div>
+    <br>
+    <p>Понатаму имате опција да изберете каде да ви се инсталира. Вие си избирате сами!</p>
+    <div class="image-container2">
+        <img src="image/nextnext.png" alt="slika">
+    </div>
+    <br>
 
+    <p>Како за крај ќе ви се појави следниов прозорец со копче Install кое треба да го кликнете за да ви се инсталира
+        Pycharm.</p>
+    <div class="image-container2">
+        <img src="image/install.png" alt="slika">
+    </div>
+    <br>
+    <p>На нашиот десктоп се појавува нова икона и кликаме на неа. Понатаму кликаме дека ги прифаќаме и условите за
+        користење и продолжуваме.</p>
+    <div class="image-container">
+        <img src="image/icon.png" alt="slika">
+    </div>
+    <br>
+    <p>______________________________________________________</p>
+    <hr>
+    <p>За да креираме проект, кликаме на New Project, па потоа на Create.</p>
+    <div class="image-container2">
+        <img src="image/welcome.png" alt="slika">
+    </div>
+    <br>
+    <p class="bigger"><b>Проверка дали се функционира успешно?</b></p>
+    <p>Проверката ја правиме со креирање на едноставна програма која што треба да ни испише (Hello, World). Кликаме на
+        зелената стрелка која се наоѓа во десниот кош и го очекуваме следниот резултат</p>
+    <div class="image-container">
+        <img src="image/proverka.png" alt="slika">
+    </div>
+    <br>
 
+    <p>Инсталацијата е успешна, можеме да започнеме со учење на некои основни синтакси на програмскиот јазик Python.</p>
+    <br>
+    <div class="button-container">
+        <a href="../sintaksa_varijabli_dataTipovi_operatori/sintaksaNaPython.html" target="_blank"
+           class="styled-button">Продолжи на следната страница</a>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="containerr">
@@ -27,7 +178,7 @@
             <div class="footer-col">
                 <h4>Во врска со курсот</h4>
                 <ul>
-                    <li><a href="../courseMain.html">Предавања</a></li>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
                     <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
                 </ul>
             </div>
@@ -52,7 +203,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </footer>
