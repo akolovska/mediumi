@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Речници (Dictionaries)</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
+
+</head>
+<body>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Речници (Dictionaries)</h2>
+    <p>Речниците се <b>колекции од парови: клуч-вредност</b>. <b>Клучевите</b> во речникот мора да бидат <b>уникатни и
+        непроменети</b>, додека пак <b>вредностите</b> можат да бидат <b>од било кој тип и можат да се менуваат</b>.
+        Речниците можат да се менуваат, но не дозволуваат да вредностите да имаат дупликати.
+    </p>
+    <h4>Креирање речник</h4>
+    <div class="image-container3">
+        <img src="image/primer1.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>Да се испечати вредноста на “brand”</p>
+    <div class="image-container3">
+        <img src="image/primer2.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <p>______________________________________________________</p>
+    <p><b>*Во речникот две вредности не може да имаат ист клуч:</b></p>
+    <div class="image-container3">
+        <img src="image/primer3.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>Во овој случај како вредност на (year) ќе се земе вредноста 2020<br>
+        односно ќе се испечати: <b>{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}</b>
+    </p>
+    <h4>Должина на речникот</h4>
+    <p>За да се одреди колку елементи содржи речникот се користи готовата функција <b>len()</b></p>
+    <div class="image-container3">
+        <img src="image/primer4.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>
+        <b>print(len(thisdict))</b><br>
+        Резултатот ќе биде 3
+    </p>
+    <h4>Типови на податоци во речниците</h4>
+    <p>Вредностите на елементите во речникот можат да бидат од било каков тип на податоци: <b>string, int, Boolean</b>,
+        вклучувајќи и <b>листа</b></p>
+    <div class="image-container3">
+        <img src="image/primer5.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <p>______________________________________________________</p>
+    <h3>За да пристапите до елементите(items) на речникот, тоа го правите со повик на (името на клучот), во квадратни
+        загради</h3>
+    <div class="image-container3">
+        <img src="image/primer6.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>// да се земе вредноста, чиј клуч е “model“.</p>
+    <h3>За да се испечатат сите клучеви во еден речник тоа го правите со:</h3>
+    <p><b>x = thisdict.values()</b></p>
+    <div class="image-container3">
+        <img src="image/primer7.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <h3>Истото се прави ако сакаме да ги добиеме вредностите:</h3>
+    <p><b>x = thisdict.values()</b></p>
+    <div class="image-container3">
+        <img src="image/primer8.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>Резултатот од ова би бил: <b>dict_values(['Ford', 'Mustang', 1964])</b></p>
+    <h4>Промена на вредност</h4>
+    <p>За да се промени вредноста на некој елемент, најпрво пристапуваме до името на неговиот клуч и потоа ја менуваме
+        неговата вредност:
+        <br><b>thisdict[“year”] = 2018</b>
+    </p>
+    <h4>Додавање на нов елемент</h4>
+    <div class="image-container3">
+        <img src="image/primer9.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>Со помош на <br> <b>thisdict["color"] = "red"</b>
+        <br>print(thisdict)
+    </p>
+    <h4>Бришење на елемент</h4>
+    <p>Со помош на <b>pop()</b> методот:</p>
+    <div class="image-container3">
+        <img src="image/primer10.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <p>-Со помош на клучниот збор del:<br><b>del thisdict["model"]</b></p>
+    <h3>СЕ ДОБИВА ИСТИОТ РЕЗУЛТАТ КАКО И ПРИМЕРОТ ПОГОРЕ</h3>
+    <p>______________________________________________________</p>
+    <p><b>Со помош на клучниот збор del може да се избрише и целиот речник:<br><b>del thisdict</b></b></p>
+    <div class="image-container3">
+        <img src="image/primer11.png" alt="slika" style="margin-left: 8px">
+    </div>
+    <br>
+    <h4>Методи за работа кај речниците</h4>
+    <p>
+        <b>clear()</b> -> Ги брише сите елементи од речникот<br><br>
+        <b>copy()</b> -> Враќа копија од речникот<br><br>
+        <b>fromKeys()</b> -> Враќа речник со специфицирана вредност и клуч<br><br>
+        <b>get()</b> -> Враќа вредност за специфицираниот клуч<br><br>
+        <b>items()</b> -> Враќа листа која содржи торка за секој пар на клучни вредности<br><br>
+        <b>keys()</b> -> Враќа листа која ги содржи сите клучеви во речникот<br><br>
+        <b>pop()</b> -> Го брише елементот со специфицираниот клуч<br><br>
+        <b>popitem()</b> -> Се брише последно додадениот клуч-вредност пар<br><br>
+        <b>setdefault()</b> -> Враќа вредност на специфицираниот клуч, ако клучот не постои, се вметнува истиот<br><br>
+        <b>update()</b> -> Прави update на речникот со специфицираниот клуч-вредност пар.<br><br>
+        <b>values()</b> -> Враќа листа од сите вредности во речникот<br><br>
+    </p>
+    <div class="button-container">
+        <a href="mnozestva.html" target="_blank" class="styled-button">Продолжи на
+            следната страница</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../intro.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Нешто друго да се додаде??</h4>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
