@@ -36,10 +36,33 @@
             color: #2980b9;
             margin-top: 30px;
         }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
-
+<h1>Основи на Python</h1>
 <div class="main-content">
     <h2>Што е python?</h2>
     <p>Python претставува прграмски јазик. Создаден е од Гвидо ван Росум и првпат е објавен во 1991 година.
@@ -55,6 +78,10 @@
     </p>
     <p>Python е доста популарен, благодарение на неговата едноставност и моќност, што го прави одличен избор за многу
         програмери и професионалци во различни области.</p>
+
+    <div class="button-container">
+        <a href="instalacijaNaPycharm.html" target="_blank" class="styled-button">Продолжи на следната страница</a>
+    </div>
 </div>
 
 <footer class="footer">
@@ -71,7 +98,7 @@
             <div class="footer-col">
                 <h4>Во врска со курсот</h4>
                 <ul>
-                    <li><a href="../courseMain.html">Предавања</a></li>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
                     <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
                 </ul>
             </div>
@@ -96,7 +123,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </footer>
