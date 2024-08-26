@@ -2,34 +2,238 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Датотеки</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
 </head>
 <body>
-<p>
-    Ракувањето со датотеки е важен дел од секоја веб-апликација.<br>
-    Пајтон има неколку функции за креирање, читање, ажурирање и бришење датотеки.
-    Клучната функција за работа со датотеки во Python е функцијата open().
-    Функцијата open() зема два параметри; име на датотека и режим.
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Што е датотека?</h2>
+    <!--    TUKA PRODOLZI-->
+    <p>Работата со датотеки е важен дел од секоја веб-апликација.<br>
+        Python има неколку функции за креирање, читање, ажурирање и бришење датотеки.<br><br>
+        Клучната функција за работа со датотеки во Python е функцијата <b>open()</b>.
+        Функцијата open() зема два параметри:<br> <b>име на датотека и режим</b>.</p>
+    <h4>Отворање на датотека</h4>
+    <p>За да се отвори датотека во Python, користиме функцијата open():</p>
+    <div class="image-container3">
+        <img src="image/pr1.png" alt="slika">
+    </div>
+    <br>
 
-    Постојат четири различни методи (режими) за отворање датотека:
-<div>"r" - Читање - Стандардна вредност. Отвора датотека за читање, грешка ако датотеката не постои</div>
-<div>"a" - Додади - Отвора датотека за додавање, ја креира датотеката ако не постои</div>
-<div>"w" - Write - Отвора датотека за пишување, ја креира датотеката ако не постои</div>
-<div>"x" - Креирај - Ја создава наведената датотека, враќа грешка ако датотеката постои</div>
+    <h3>Креирајте празна датотека со име "myfile.txt":</h3>
+    <p><b>f = open("myfile.txt", "x")</b></p>
+    <h3>Креирајте нова датотека која не постои:</h3>
+    <p><b>f = open("myfile.txt", "w")</b></p>
+    <p>______________________________________________________</p>
 
-    Дополнително, можете да одредите дали датотеката треба да се ракува како бинарен или текстуален режим
-<div>"t" - Текст - Стандардна вредност. Текст режим</div>
-<div>„б“ - Бинарен - Бинарен режим (на пр. слики)</div>
+    <h4>Постојат четири различни методи (режими) за отворање датотека:</h4>
+    <p><b>"r" - Читање</b> - Стандардна вредност. Отвора датотека за читање, грешка ако датотеката не постои</p>
+    <p><b>"a" - Додади</b> - Отвора датотека за додавање, ја креира датотеката ако не постои</p>
+    <p><b>"w" - Write</b> - Отвора датотека за пишување, ја креира датотеката ако не постои</p>
+    <p><b>"x" - Креирај</b> - Ја создава наведената датотека, враќа грешка ако датотеката постои</p>
 
-    Синтакса
-    За да отворите датотека за читање, доволно е да го наведете името на датотеката:
-<div>f = open("demofile.txt")</div>
-    Кодот погоре е ист како:
-<div>f = open("demofile.txt", "rt")</div>
-    Бидејќи „r“ за читање и „t“ за текст се стандардните вредности, не треба да ги одредувате.
+    <h4>Читање од датотека</h4>
+    <p>За да се прочитаат податоци од датотека, можете да користите неколку методи:</p>
+    <p>Читање на целата содржина - <b>file.read()</b></p>
+    <p>Читање на една линија - <b>file.readline()</b></p>
+    <p>Читање на сите линии како листа - = <b>file.readlines()</b></p>
+    <div class="image-container3">
+        <img src="image/pr2.png" alt="slika">
+    </div>
+    <br>
 
+    <h4>Запишување во датотека</h4>
+    <p>За запишување во датотека, користете го методот <b>write()</b> или <b>writelines()</b>:</p>
+    <div class="image-container3">
+        <img src="image/pr3.png" alt="slika">
+    </div>
+    <br>
 
-</p>
+    <h3>Отворете ја датотеката „demofile2.txt“ и додајте ја содржината на датотеката:</h3>
+    <div class="image-container3">
+        <img src="image/pr8.png" alt="slika">
+    </div>
+    <br>
 
+    <h3>Отворете ја датотеката „demofile3.txt“ и презапишете ја содржината:</h3>
+    <div class="image-container3">
+        <img src="image/pr9.png" alt="slika">
+    </div>
+    <br>
+
+    <h4>Затворање на датотека</h4>
+    <p>Откако ќе завршите со работа во датотеката, многу е важно е да ја затворите датотеката:</p>
+    <p>Тоа го правите со: <b>file.close()</b></p><br>
+    <p>За да избегнете да добиете грешка, можеби ќе сакате да проверите дали датотеката постои пред да се обидете да ја
+        избришете:</p>
+    <p> Проверете дали постои датотека, а потоа избришете ја:</p>
+    <div class="image-container3">
+        <img src="image/pr7.png" alt="slika">
+    </div>
+    <p>______________________________________________________</p>
+
+    <h4>Работа со бинарни датотеки</h4>
+    <p>За работа со бинарни датотеки, користете го <b>суфиксот "b"</b> во режимот:</p>
+    <div class="image-container3">
+        <img src="image/pr4.png" alt="slika">
+    </div>
+    <br>
+
+    <div class="button-container">
+        <a href="../libraries/biblioteki.html" target="_blank" class="styled-button">Продолжи на
+            следната страница</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../intro.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Нешто друго да се додаде??</h4>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
