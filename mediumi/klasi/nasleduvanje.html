@@ -2,102 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Наследување </title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
+
 </head>
 <body>
-<p><h1>Наследување во Python</h1>
-    Наследувањето ни овозможува да дефинираме класа која ги наследува сите методи и својства од друга класа.
-    Матичната класа е класата од која се наследува, исто така наречена основна класа.
-    Детска класа е класата што наследува од друга класа, наречена и изведена класа.
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Наследување во Python</h2>
+    <p>Наследувањето ни овозможува да дефинираме класа која ги
+        наследува сите методи и својства од друга класа.
+        Родителската класа е класата од која се наследува, исто така
+        наречена основна класа. Детска класа е класата што наследува
+        од друга класа, наречена и изведена класа.
+        Секоја класа може да биде родителска класа, така што
+        синтаксата е иста како и креирањето на која било друга класа:</p>
+    <p>Креирајте класа со име Person, со својства за име и презиме и метод за печатење:</p>
+    <div class="image-container3">
+        <img src="image/nasleduvanjePerson.png" alt="slika">
+    </div>
     <br>
-    Секоја класа може да биде матична класа, така што синтаксата е иста како и креирањето на која било друга класа:
-<br>
-    Креирајте класа со име Person, со својства за име и презиме и метод за печатење:
+    <p>За да креирате класа што ја наследува функционалноста од друга класа, испратете ја
+        родителската класа како параметар кога ја креирате класата дете:</p>
+    <p>Направете класа со име Student, која ќе ги наследи својствата и методите од класата Person:</p>
+    <div class="image-container3">
+        <img src="image/studentPerson.png" alt="slika">
+    </div>
+    <br>
+    <p style="font-size: 15px">Забелешка: Користете го клучниот збор <b>pass</b> кога не сакате да додавате други
+        својства или методи во класата.</p>
+    <p>Сега класата Student ги има истите својства и методи како класата Person.</p>
+    <p>Користете ја класата Student за да креирате објект, а потоа извршете го методот printname</p>
+    <div class="image-container3">
+        <img src="image/printname.png" alt="slika">
+    </div>
+    <br>
+    <p>Досега креиравме дете класа која ги наследува својствата и методите од својот родител.</p>
+    <p>Сакаме да ја додадеме функцијата __init__() во класата дете (наместо клучниот збор pass).</p>
+    <p style="font-size: 15px">Забелешка: Функцијата __init__() се повикува автоматски секогаш кога класата се користи
+        за создавање нов објект.</p>
+    <div class="image-container3">
+        <img src="image/init-pass.png" alt="slika">
+    </div>
+    <br>
+    <p>Кога ќе ја додадете функцијата __init__(), класата дете повеќе нема да ја наследува функцијата __init__() на
+        родителот.</p>
+    <p style="font-size: 15px">Забелешка: Функцијата __init__() на детето го надминува наследувањето на функцијата
+        __init__() на родителот.</p>
+    <p>За да го задржите наследството на функцијата на родителот, додадете повик до функцијата __init__() на
+        родителот:</p>
+    <div class="image-container3">
+        <img src="image/zadrzi_nasledstvo.png" alt="slika">
+    </div>
+    <br>
+    <p>Сега успешно ја додадовме функцијата __init__() и
+        го задржавме наследството на родителската класа
+        и подготвени сме да додадеме функционалност во истата</p>
+    <p>Python, исто така, има функција <b>super()</b> која ќе ја
+        натера дете класата да ги наследи сите методи и својства од својот родител:</p>
+    <div class="image-container3">
+        <img src="image/super().png" alt="slika">
+    </div>
+    <br>
+    <p>Со користење на функцијата super(), не мора да го користите името на родителскиот елемент, тој автоматски ќе ги
+        наследи методите и својствата од неговиот родител.</p>
+    <p>Додадете својство наречено graduationyear во класата Student:</p>
+    <div class="image-container3">
+        <img src="image/graduationyear.png" alt="slika">
+    </div>
+    <br>
+    <p>Во примерот подолу, 2019 година треба да биде променлива и да се префрли во класата Student при креирање
+        студентски објекти. За да го направите тоа, додадете друг параметар во функцијата __init__():
+        <br>
+        <br>
+        Додадете параметар year:
+    </p>
+    <div class="image-container3">
+        <img src="image/year.png" alt="slika">
+    </div>
+    <br>
+    <p>Додадете метод наречен <b>welcome</b> во класата Student:</p>
+    <div class="image-container3">
+        <img src="image/welcome.png" alt="slika">
+    </div>
+    <br>
+    <p>Ако додадете метод во класата дете со истото име како функција во родителската класа, наследувањето на
+        родителскиот метод ќе се отфрли</p>
 
-<div>class Person:
-    def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+    <div class="button-container">
+        <a href="polimorfizam.html" target="_blank" class="styled-button">Продолжи на
+            следната страница</a>
+    </div>
+</div>
 
-    def printname(self):
-    print(self.firstname, self.lastname)
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../intro.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
 
-    #Use the Person class to create an object, and then execute the printname method:
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
 
-    x = Person("John", "Doe")
-    x.printname()</div>
+            <div class="footer-col">
+                <h4>Контакт mail</h4>
+                <ul>
+                    <li><a href="#">bojana.toseva@yahoo.com</a></li>
+                    <li><a href="#">akolovka@@</a></li>
+                    <li><a href="#">krstevskaks@gmail.com</a></li>
 
-    За да креирате класа што ја наследува функционалноста од друга класа, испратете ја матичната класа како параметар кога ја креирате класата дете:
-<br>
-    Направете класа со име Student, која ќе ги наследи својствата и методите од класата Person:
-<br>
-<div>class Student(Person):
-    pass</div>
+                </ul>
+            </div>
 
-    Забелешка: Користете го клучниот збор pass кога не сакате да додавате други својства или методи во класата.
-<br>
-    Сега класата Student ги има истите својства и методи како класата Person.
-<br>
-    Користете ја класата Student за да креирате објект, а потоа извршете го методот printname:
-<br>
-    <div>x = Student("Mike", "Olsen")
-        x.printname()</div>
-
-    Досега создадовме дете класа која ги наследува својствата и методите од својот родител.<br>
-    Сакаме да ја додадеме функцијата __init__() во класата дете (наместо клучниот збор pass).<br>
-    Забелешка: Функцијата __init__() се повикува автоматски секогаш кога класата се користи за создавање нов објект.
-<br>
-<div>class Student(Person):
-    def __init__(self, fname, lname):
-    #додади атрибути</div>
-    Кога ќе ја додадете функцијата __init__(), класата дете повеќе нема да ја наследува функцијата __init__() на родителот.
-<br>    Забелешка: Функцијата __init__() на детето го надминува наследувањето на функцијата __init__() на родителот.
-<br>
-    За да го задржите наследството на функцијата __init__() на родителот, додајте повик до функцијата __init__() на родителот:
-<div>class Student(Person):
-    def __init__(self, fname, lname):
-    Person.__init__(self, fname, lname)</div>
-    Сега успешно ја додадовме функцијата __init__() и го задржавме наследството на матичната класа и подготвени сме да додадеме функционалност во функцијата __init__().
-<br>
-    Пајтон, исто така, има функција <b>super()</b> која ќе ја натера дете класата да ги наследи сите методи и својства од својот родител:
-
-    <div>class Student(Person):
-        def __init__(self, fname, lname):
-        super().__init__(fname, lname)</div>
-    Со користење на функцијата super(), не мора да го користите името на матичниот елемент, тој автоматски ќе ги наследи методите и својствата од неговиот родител.
-<br>
-    Додајте својство наречено graduationyear во класата Student:
-
-<div>class Student(Person):
-    def __init__(self, fname, lname, year):
-    super().__init__(fname, lname)
-    self.graduationyear = 2019
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    Во примерот подолу, 2019 година треба да биде променлива и да се префрли во класата Student при креирање студентски објекти. За да го направите тоа, додадете друг параметар во функцијата __init__():
-<br>
-    Додадете параметар year:
-
-<div>class Student(Person):
-    def __init__(self, fname, lname):
-    super().__init__(fname, lname)
-    self.graduationyear = year
-
-    x = Student("Mike", "Olsen", 2019)
-    </div>
-
-Додадете метод наречен welcome во класата Student:
-<br>
-<div>class Student(Person):
-    def __init__(self, fname, lname, year):
-    super().__init__(fname, lname)
-    self.graduationyear = year
-
-    def welcome(self):
-    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)</div>
-
-    Ако додадете метод во класата дете со истото име како функција во матичната класа, наследувањето на родителскиот метод ќе се отфрли.
-</p>
-
+</footer>
 </body>
 </html>
