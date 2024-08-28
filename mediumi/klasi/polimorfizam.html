@@ -2,88 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Полиморфизам</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
 </head>
 <body>
-<p>
-    <h3>Полиморфизам</h3>
-    Полиморфизмот често се користи во методите на класи, каде што можеме да имаме повеќе класи со исто име на методот.
-    На пример, да речеме дека имаме три класи: Car, Boat и Plane, и сите тие имаат метод наречен move():
-    Различни класи со ист метод:
-<div>class Car:<br>
-    def __init__(self, brand, model):<br>
-    self.brand = brand<br>
-    self.model = model<br>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Полиморфизам</h2>
+    <p>Полиморфизмот е еден од основните концепти во објектно-ориентираното програмирање и овозможува објекти од
+        различни класи да бидат третирани како објекти од ист тип преку интерфејсот кој го дефинираат.</p>
+    <p>На пример, да речеме дека имаме три класи: Car, Boat и Plane,
+        и сите тие имаат метод наречен move():</p>
+    <p> Различни класи со ист метод:</p>
+    <div class="image-container3">
+        <img src="image/polimorfizam.png" alt="slika">
+    </div>
+    <br>
+    <p>Во циклусот for, листата (car1, boat1, plane1)
+        содржи објекти од различни класи.
+        <br>
+        <br>
+        Кога повикуваме x.move(), Python одредува кој метод move()
+        да го изврши во зависност од типот на објектот што моментално
+        се обработува. Иако x е дефиниран како објект од типот Car, Boat,
+        или Plane, Python ќе го повика методот
+        move() што е специфичен за класата на тој објект.</p>
+    <h4>Полиморфизам на класа на наследување</h4>
+    <p>Што е со часовите со детски паралелки со исто име?
+        Можеме ли да користиме полиморфизам таму?
+        Да.
+        <br>
+        <br>Ако го искористиме примерот погоре и направиме родителска
+        класа наречена Vehicle и направиме Car, Boat, Plane детски
+        класи на Vehicle, детските класи ги наследуваат методите
+        Vehicle, но можат и да ги отфрлат</p>
+    <p>Создадете класа наречена Vehicle и направете дете класи на возила за Car, Boat, Airplane:</p>
+    <div class="image-container3">
+        <img src="image/poli-nasleduvanje.png" alt="slika">
+    </div>
+    <br>
+    <p>Детските класи ги наследуваат својствата и методите од родителската класа.
+        Во примерот погоре можете да видите дека класата Car е празна, но го наследува brand, model и move() од Vehicle.
+        Класите Boat и Plane исто така наследуваат brand, model и move() од Vehicle, но и двете го отфрлаат методот
+        move().
+        Поради полиморфизмот можеме да го извршиме истиот метод за сите класи.</p>
 
-    def move(self):<br>
-    print("Drive!")<br>
+    <div class="button-container">
+        <a href="init%20constructor.html" target="_blank" class="styled-button">Продолжи на
+            следната страница</a>
+    </div>
 
-    class Boat:<br>
-    def __init__(self, brand, model):<br>
-    self.brand = brand<br>
-    self.model = model<br>
+</div>
 
-    def move(self):<br>
-    print("Sail!")<br>
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../intro.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
 
-    class Plane:<br>
-    def __init__(self, brand, model):<br>
-    self.brand = brand<br>
-    self.model = model<br>
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
 
-    def move(self):<br>
-    print("Fly!")<br>
+            <div class="footer-col">
+                <h4>Контакт mail</h4>
+                <ul>
+                    <li><a href="#">bojana.toseva@yahoo.com</a></li>
+                    <li><a href="#">akolovka@@</a></li>
+                    <li><a href="#">krstevskaks@gmail.com</a></li>
 
-    car1 = Car("Ford", "Mustang")       #Креирајте класа Car<br>
-    boat1 = Boat("Ibiza", "Touring 20") #Креирајте класа Boat<br>
-    plane1 = Plane("Boeing", "747")     #Креирајте класа Plane<br>
+                </ul>
+            </div>
 
-    for x in (car1, boat1, plane1):<br>
-    x.move()</div>
-    Погледнете ја јамката за на крајот. Поради полиморфизмот можеме да го извршиме истиот метод за сите три класи.
-<br>
-<h3>Полиморфизам на класа на наследување</h3>
-    Што е со часовите со детски паралелки со исто име? Можеме ли да користиме полиморфизам таму?
-<br>
-    Да. Ако го искористиме примерот погоре и направиме родителска класа наречена Vehicle и направиме Car, Boat, Plane детски класи на Vehicle, детските класи ги наследуваат методите Vehicle, но можат да ги отфрлат:
-<br>
-    Создадете класа наречена Vehicle и направете дете класи на возила за Car, Boat, Airplane:
-<div>class Vehicle:<br>
-    def __init__(self, brand, model):<br>
-    self.brand = brand<br>
-    self.model = model<br>
-
-    def move(self):<br>
-    print("Move!")<br>
-
-    class Car(Vehicle):<br>
-    pass<br>
-
-    class Boat(Vehicle):<br>
-    def move(self):<br>
-    print("Sail!")<br>
-
-    class Plane(Vehicle):<br>
-    def move(self):<br>
-    print("Fly!")<br>
-
-    car1 = Car("Ford", "Mustang") #Create a Car object<br>
-    boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object<br>
-    plane1 = Plane("Boeing", "747") #Create a Plane object<br>
-
-    for x in (car1, boat1, plane1):<br>
-    print(x.brand)<br>
-    print(x.model)<br>
-    x.move()</div>
-
-    Детските класи ги наследуваат својствата и методите од матичната класа.<br>
-
-    Во примерот погоре можете да видите дека класата Car е празна, но го наследува brand, model и move() од Vehicle.
-<br>
-    Класите Boat и Plane исто така наследуваат brand, model и move() од Vehicle, но и двете го отфрлаат методот move().
-<br>
-    Поради полиморфизмот можеме да го извршиме истиот метод за сите класи.<br>
-</p>
-
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
