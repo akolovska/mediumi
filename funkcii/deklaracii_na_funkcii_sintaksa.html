@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Функции, декларација и синтакса</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h4 style="margin-top: 10px">Декларација на функција и синтакса</h4>
+    <p><b>Функцијата е повторно употреблив блок од код кој извршува одредена задача.</b> Тие се дефинирани со помош на
+        клучниот збор <b>„def“</b>, проследено со <b>името на функцијата и множество загради кои содржат опционални
+            параметри.</b> Функциите може да имаат повратни вредности, овозможувајќи им да произведуваат резултати или
+        да вршат операции.</p> <br>
+    <h3>**При нормален тек на програмата функциите не се извршуваат се додека не бидат експлицитно повикани!!!!</h3>
+    <p>______________________________________________________</p>
+    <p style="font-size: 1em"><u>Зошто се користат функциите?</u><br><br>
+        -> попрегледен код,<br>
+        -> огранизација на кодот<br>
+        -> функциите се користат повеќе пати<br>
+    </p>
+    <h4>Основна синтакса</h4>
+    <p style="font-size: 1em">
+        <b>def име_на_функција(параметри):<br>
+            # блок код што ја извршува функцијата<br>
+            return резултат # (опционално)</b>
+    </p>
+    <h4>Повик на функција</h4>
+    <p>Самиот повик на веќе напишана функција, се прави така што го пишуваме името на функцијата и загради. Доколку има
+        аргументи тие се задаваат во заградите. Во линијата каде се повикува функцијата, почнува да се извршува и
+        функцијата.</p>
+    <div class="image-container3">
+        <img src="image/primer1.png" alt="slika">
+    </div>
+    <br>
+    <h4 style="font-size: 1.5em">**Добра практика е функциите да се пишуваат на почетокот на кодот!!!</h4>
+    <p>______________________________________________________</p>
+    <h4>Функции со аргументи</h4>
+    <p>
+        Агрументи претставуваат податоците кои се испраќаат заедно со функцијата.
+        При самото дефинирање на функциите тие треба да се наведат во загради, како и при повик на функцијата исто така
+        треба да се наведат.
+        Како што се дефинирани аргументите во функцијата, така треба подоцна да ги испратиме истите, во спротивно
+        функцијата нема да може сама да препознае кој аргумент за кој е испратен. Повеќе аргументи се одделуваат со
+        запирка (,).
+    </p>
+    <div class="image-container3">
+        <img src="image/pr2.png" alt="slika">
+    </div>
+    <br>
+    <h4>Повратни вредности во функциите</h4>
+    <p><b>Повратна вредност</b> претставува резултатот кој сакаме функцијата да ни го врати. Ако како вредност на некоја
+        променлива повикаме некоја функција, тогаш како вредност на таа променлива ќе биде повратната вредност од самата
+        функција.
+        При дефинирање на повратна вредност се користи клучниот збор return.
+    </p>
+    <div class="image-container3">
+        <img src="image/pr3.png" alt="slika">
+    </div>
+    <br>
+    <div class="button-container">
+        <a href="rekurzivniFunkcii.html" target="_blank" class="styled-button">Продолжи на следната страница</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../index.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакт mail</h4>
+                <ul>
+                    <li><a href="#">bojana.toseva@yahoo.com</a></li>
+                    <li><a href="#">anakolovska2510@gmail.com</a></li>
+                    <li><a href="#">krstevskaks@gmail.com</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/OsnoviNaPython" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

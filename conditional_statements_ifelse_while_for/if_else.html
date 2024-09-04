@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title> If - else циклуси </title>
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <p style="font-size: 1.5em; margin-top: 10px">Логичките услови во Python се користат за донесување на одлуки во
+        кодот. Тие
+        овозможуваат извршување на различни делови од кодот во зависност од тоа дали даден услов е <b>‘True’</b> или <b>‘False’</b>.
+    </p>
+    <p style="font-size: 1.5em">Логичките услови се имплементираат со користење на условни изрази како: if, elif,
+        else.</p><br>
+    <h2 style="margin-top: 10px">If - else циклуси</h2>
+    <p><b>if израз</b> – се користи за проверка дали дадениот услов е точен. Доколку е точен, кодот во тој блок се
+        извршува</p>
+    <div class="image-container3">
+        <img src="image/uslov.png" alt="slika">
+    </div>
+    <p>______________________________________________________</p>
+    <p><b>elif израз – elif</b> претставува кратенка за “else if“, се користи за да се проверат дополнителни услови ако
+        првиот if услов не е точен.<br>
+        Пример</p>
+    <div class="image-container3">
+        <img src="image/primer1.png" alt="slika">
+    </div>
+    <br>
+    <p><u>Објаснување</u><br>
+        Ако променливата <b>vreme_vo_denot</b> е помала од 12, ќе се испечати "Добро утро!". <br>
+        Ако <b>vreme_vo_denot</b> не е помала од 12, но е помала од 18, ќе се испечати "Добар ден!".<br>
+        Ако ниеден од овие услови не е вистинит, значи времето е после 18:00 и ќе се испечати "Добра вечер!".<br>
+    </p>
+    <p>______________________________________________________</p>
+    <p><b>else израз</b> – се користи за да се изврши дополнителен код, ако ниту еден од претходните улови не е точен.
+    </p>
+    <div class="image-container3">
+        <img src="image/proverka2.png" alt="slika">
+    </div>
+    <br>
+    <p><u>Објаснување</u><br>
+        Ако променливата <b>temperatura</b> е поголема од 30, ќе се испечати "Многу е топло надвор."<br>
+        Ако <b>temperatura</b> не е поголема од 30, но е поголема од 20, ќе се испечати "Времето е пријатно."<br>
+        Ако ниту еден од претходните услови не е точен, односно ако <b>temperatura</b> е 20 или помала, ќе се испечати
+        "Малку е ладно надвор."<br>
+    </p>
+    <p>______________________________________________________</p>
+
+    <h2>PASS</h2>
+    <p>Исказот if не може да биде празен, но ако поради некоја причина имате потреба истиот да биде празен (без
+        содржина),
+        ставете го изразот <b>PASS</b> за да не добиете грешка!!
+    </p>
+    <div class="image-container3">
+        <img src="image/proverka3.png" alt="slika" style="margin-left: 5px">
+    </div>
+    <br>
+    <p>______________________________________________________</p>
+
+    <h2>Вгнездени циклуси</h2>
+    <div class="image-container3">
+        <img src="image/proverka5.png" alt="slika" style="margin-left: 5px">
+    </div>
+    <br>
+    <p>Во овој пример ако <b>`age`</b> e поголема од 18 и <b>`name`</b> e "Marija", ќе биде испечатено:
+        Marija is greater than 18. Ако <b>`возраст`</b> е помала или еднаква на 18 ќе се испечати "Marija is not greater
+        than 18."
+    </p>
+    <br>
+    <p>______________________________________________________</p>
+    <p style="font-size: 1.2em">Употреба на повеќе услови</p>
+    <p>Можете да користите повеќе услови со логичките оператори <b>'and' 'or' 'not'
+        Пример</b></p>
+    <div class="image-container3">
+        <img src="image/proverka4.png" alt="slika" style="margin-left: 5px">
+    </div>
+    <br>
+
+    <div class="button-container">
+        <a href="while.html" target="_blank" class="styled-button">Продолжи на следната страница</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../index.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакт mail</h4>
+                <ul>
+                    <li><a href="#">bojana.toseva@yahoo.com</a></li>
+                    <li><a href="#">anakolovska2510@gmail.com</a></li>
+                    <li><a href="#">krstevskaks@gmail.com</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/OsnoviNaPython" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

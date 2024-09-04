@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Матрици</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh; /* Adjust based on the desired height */
+            text-align: center;
+            margin-bottom: 30px; /* Add some spacing before the footer */
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h4 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content h3 {
+            color: #3775A9;
+            font-size: 1em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto; /* Responsive image */
+        }
+
+        .image-container2 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 80%;
+            margin-left: 76px;
+        }
+
+        .image-container3 img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust for spacing */
+            max-width: 100%;
+            margin-left: 76px;
+        }
+
+        body > div > p.bigger {
+            font-size: 24px;
+            color: #20375d;
+            max-width: 700px; /* Limit width for better readability */
+            margin-bottom: 20px;
+        }
+
+        /*-----kopce na kraj-------*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Adjust for spacing */
+        }
+
+
+        .styled-button {
+            background-color: #3775A9; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            text-decoration: none; /* Remove underline from link */
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .styled-button:hover {
+            background-color: #2c5b89; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+<h1>Основи на Python</h1>
+<div class="main-content">
+    <h2 style="margin-top: 10px">Матрици (Matrices)</h2>
+    <p>Матрицата претставува збирка на броеви распоредени во правоаголна низа во редови и колони.</p>
+    <p>Матриците исто така се нарекуваат и дво димензионални низи затоа што тие во
+        суштина се низи, разликата е во тоа што кај низите имавме податоци само по х оската кај матриците
+        имаме податоци и по х и по у оската. </p>
+    <div class="image-container3">
+        <img src="image/example.png" alt="slika">
+    </div>
+    <br>
+
+    <h4>Декларација на матрица</h4>
+    <p>За да дефинираме некоја матрица треба да се оддели секоја редица во рамките на листата.</p>
+    <div class="image-container3">
+        <img src="image/pr1.png" alt="slika">
+    </div>
+    <br>
+    <h4>Пристап до елемент</h4>
+    <p>Тоа го правиме со наведување на индексот на редот и колоната на елементот до кој сакаме да пристапиме</p>
+    <div class="image-container3">
+        <img src="image/pr2.png" alt="slika">
+    </div>
+    <br>
+    <p>На овој начин пристапуваме до елементот 3, од првиот ред</p>
+
+    <h4>Изминување на матрица</h4>
+    <p>За изминување на една матрица потребни ни се 2 for циклуси. Првиот циклус ќе се движи низ редиците, додека
+        вториот циклус ќе се движи
+        низ колоните во рамките на една редица. </p>
+    <div class="image-container3">
+        <img src="image/pr3.png" alt="slika">
+    </div>
+    <p>______________________________________________________</p>
+    <h4>Numpy</h4>
+    <p>Numpy може да се скрати како Numeric Python, е библиотека за анализа на податоци за Python која се состои од
+        повеќедимензионални низи-објекти, како и збирка рутини за обработка на овие низи.</p>
+    <h4>Собирање на две матрици</h4>
+    <p>користиме + оператор за да додадеме соодветни елементи на две NumPy матрици.</p>
+    <div class="image-container3">
+        <img src="image/pr4.png" alt="slika">
+    </div>
+    <br>
+    <h4>Множење на матрици</h4>
+    <p>За да множиме две матрици, ја користиме методата dot().<br>
+        Забелешка: * се користи за множење низи (множење на соодветните елементи од две низи) не за множење на матрици.
+    </p>
+    <div class="image-container3">
+        <img src="image/pr5.png" alt="slika">
+    </div>
+    <br>
+    <h3>Пристап до елементи во матрица</h3>
+    <p>Да почнеме со еднодимензионална NumPy низа.<br></p>
+    <div class="image-container3">
+        <img src="image/pr6.png" alt="slika">
+    </div>
+
+    <p>______________________________________________________</p>
+
+    <h3>Пристап до редици</h3>
+    <div class="image-container3">
+        <img src="image/pr7.png" alt="slika">
+    </div>
+    <br>
+
+    <h3>Пристап до колони</h3>
+    <div class="image-container3">
+        <img src="image/pr9.png" alt="slika">
+    </div>
+    <br>
+    <div class="button-container">
+        <a href="nizi.html" target="_blank" class="styled-button">Продолжи на
+            следната страница</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../index.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакт mail</h4>
+                <ul>
+                    <li><a href="#">bojana.toseva@yahoo.com</a></li>
+                    <li><a href="#">anakolovska2510@gmail.com</a></li>
+                    <li><a href="#">krstevskaks@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/OsnoviNaPython" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
