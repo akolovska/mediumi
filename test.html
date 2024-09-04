@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .main-content h2 {
+            color: #3775A9;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            color: #34495e;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+
+        .main-content h4 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        #test-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 0 auto;
+        }
+        #tekst {
+            margin-bottom: 30px;
+        }
+        #test-form > div {
+            margin-bottom: 20px;
+        }
+        #test-form > div > p {
+            margin-bottom: 0;
+        }
+        .button {
+            padding: 5px;
+            font-size: 16px;
+            background-color: #FDDA49;
+            color: #3775A9;
+            font-weight: bold;
+            border-color: #FDDA49;
+            border-radius: 8px;
+            box-shadow: none;
+        }
+        .button:hover {
+            background-color: #facd0b;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<h1>Основи на Python</h1>
+<div class="main-content">
+<p>
+    <h2>Тест</h2>
+    <div id="tekst">Честитки, ова е последниот дел од курсот. Ти благодариме што остана со нас до крај на курсот.
+    </div>
+        <form id="test-form">
+        <div class="question">
+            <p>1. Што ќе се испечати по извршувањето на следниот код?</p>
+            <pre>
+x = 10
+if x > 5:
+    print("Greater")
+else:
+    print("Smaller")
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) Greater</label>
+                <label><input type="radio" name="q1" value="b"> b) Smaller</label>
+                <label><input type="radio" name="q1" value="c"> c) Error</label>
+                <label><input type="radio" name="q1" value="d"> d) Ништо</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Како се отвара фајл за пишување во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) open('file.txt', 'r')</label>
+                <label><input type="radio" name="q2" value="b"> b) open('file.txt', 'w')</label>
+                <label><input type="radio" name="q2" value="c"> c) open('file.txt', 'a')</label>
+                <label><input type="radio" name="q2" value="d"> d) open('file.txt', 'x')</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Која библиотека се користи за опрации со низи?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> a) math</label>
+                <label><input type="radio" name="q3" value="b"> b) numpy</label>
+                <label><input type="radio" name="q3" value="c"> c) pandas</label>
+                <label><input type="radio" name="q3" value="d"> d) matplotlib</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. За што служи <code>__init__</code> метод во Python класа?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> a) Да иницијализира променливи во класа</label>
+                <label><input type="radio" name="q4" value="b"> b) Да дефинира методи во класа</label>
+                <label><input type="radio" name="q4" value="c"> c) Да иницијализира атрибути на објекти</label>
+                <label><input type="radio" name="q4" value="d"> d) Да повика методи од parent класата</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Што е tuple во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> a) Mutable податочен тип</label>
+                <label><input type="radio" name="q5" value="b"> b) Immutable податочен тип</label>
+                <label><input type="radio" name="q5" value="c"> c) Функција</label>
+                <label><input type="radio" name="q5" value="d"> d) Метод во класа</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. Кои од следните начини се користи за да се додаде елемент на крај од низа во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> a) append()</label>
+                <label><input type="radio" name="q6" value="b"> b) insert()</label>
+                <label><input type="radio" name="q6" value="c"> c) extend()</label>
+                <label><input type="radio" name="q6" value="d"> d) add()</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. Како би пристапил до елемент во вториот ред и третата колона во матрица со име <code>matrix</code>?</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> a) matrix[2][3]</label>
+                <label><input type="radio" name="q7" value="b"> b) matrix[1][2]</label>
+                <label><input type="radio" name="q7" value="c"> c) matrix[2, 3]</label>
+                <label><input type="radio" name="q7" value="d"> d) matrix[1, 3]</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>8. Што ќе се испечати?</p>
+            <pre>
+                for i in range(3):
+    print(i)
+            </pre>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> a) 1 2 3</label>
+                <label><input type="radio" name="q8" value="b"> b) 0 1 2</label>
+                <label><input type="radio" name="q8" value="c"> c) 1 2</label>
+                <label><input type="radio" name="q8" value="d"> d) 0 1 2 3</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>9. Кои од следните искази е tuple?</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> a) [1, 2, 3]</label>
+                <label><input type="radio" name="q9" value="b"> b) {1, 2, 3}</label>
+                <label><input type="radio" name="q9" value="c"> c) (1, 2, 3)</label>
+                <label><input type="radio" name="q9" value="d"> d) {"key": 1, "key2": 2}</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>10. Кои од следните операции множи две матрици A и B со библиотеката <code>numpy</code>?</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> a) A * B</label>
+                <label><input type="radio" name="q10" value="b"> b) np.multiply(A, B)</label>
+                <label><input type="radio" name="q10" value="c"> c) np.matmul(A, B)</label>
+                <label><input type="radio" name="q10" value="d"> d) np.dot(A, B)</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>11. Како импортирате специфична функција од библиотека во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="a"> a) include function from library</label>
+                <label><input type="radio" name="q11" value="b"> b) import library</label>
+                <label><input type="radio" name="q11" value="c"> c) from library import function</label>
+                <label><input type="radio" name="q11" value="d"> d) library.function()</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>12. Што ќе биде излезот од следниот код?</p>
+            <div class="code">
+        <pre>
+def my_function(x):
+    return x + 5
+
+print(my_function(3))
+        </pre>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q12" value="a"> a) 3</label>
+                <label><input type="radio" name="q12" value="b"> b) 8</label>
+                <label><input type="radio" name="q12" value="c"> c) 5</label>
+                <label><input type="radio" name="q12" value="d"> d) None</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>13. Која метода се користи за читање на содржината од датотека во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="a"> a) file.read()</label>
+                <label><input type="radio" name="q13" value="b"> b) file.input()</label>
+                <label><input type="radio" name="q13" value="c"> c) file.get()</label>
+                <label><input type="radio" name="q13" value="d"> d) file.scan()</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>14. Која од следниве структури се користи за да се справи со исклучоци (exceptions) во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="a"> a) try-except</label>
+                <label><input type="radio" name="q14" value="b"> b) if-else</label>
+                <label><input type="radio" name="q14" value="c"> c) while-try</label>
+                <label><input type="radio" name="q14" value="d"> d) catch-throw</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>15. Која е правилната синтакса за дефинирање на класа во Python?</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="a"> a) class MyClass(): pass</label>
+                <label><input type="radio" name="q15" value="b"> b) define class MyClass(): pass</label>
+                <label><input type="radio" name="q15" value="c"> c) class MyClass[]: pass</label>
+                <label><input type="radio" name="q15" value="d"> d) MyClass = class(): pass</label>
+            </div>
+        </div>
+
+        <button type="submit" class="button">Submit</button>
+    </form>
+</p>
+</div>
+<script>
+    document.getElementById('test-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const correctAnswers = {
+            q1: 'a',
+            q2: 'b',
+            q3: 'b',
+            q4: 'c',
+            q5: 'b',
+            q6: 'a',
+            q7: 'b',
+            q8: 'b',
+            q9: 'c',
+            q10: 'c',
+            q11: 'c',
+            q12: 'b',
+            q13: 'a',
+            q14: 'a',
+            q15: 'a'
+        };
+
+        let score = 0;
+        let totalQuestions = Object.keys(correctAnswers).length;
+
+        for (let question in correctAnswers) {
+            const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+            if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                score++;
+            }
+        }
+        let resultText;
+        if (score > 12) {
+            resultText = `Имате ${score} точни од вкупно ${totalQuestions}. Честитки, го положивте курсот!`;
+        }
+        else {
+            resultText = `Имате ${score} точни од вкупно ${totalQuestions}. Обидете се повторно`;
+        }
+        alert(resultText);
+    });
+</script>
+</body>
+<footer class="footer">
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ориентација</h4>
+                <ul>
+                    <li><a href="../intro.html">Почетна страна</a></li>
+                    <li><a href="../zaNas.html">За нас</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Во врска со курсот</h4>
+                <ul>
+                    <li><a href="../mainCourse.html">Предавања</a></li>
+                    <li><a href="https://www.programiz.com/python-programming/online-compiler/">Компајлер</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакт mail</h4>
+                <ul>
+                    <li><a href="#">bojana.toseva@yahoo.com</a></li>
+                    <li><a href="#">anakolovska2510@gmail.com</a></li>
+                    <li><a href="#">krstevskaks@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Социјални линкови</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FINKI.ukim.mk" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/OsnoviNaPython" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/akolovska/mediumi/tree/main/mediumi" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</html>
